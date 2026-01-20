@@ -2,7 +2,7 @@ import createRequest from './createRequest';
 
 export default class ChatAPI {
   constructor() {
-    this.baseUrl = 'http://localhost:3000';
+    this.baseUrl = 'https://chatbackend-w37r.onrender.com';
   }
 
   async registerUser(name) {

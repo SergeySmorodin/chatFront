@@ -1,4 +1,4 @@
-import ChatAPI from "./api/ChatAPI";
+import ChatAPI from './api/ChatAPI';
 
 export default class Chat {
   constructor(container) {
@@ -42,7 +42,7 @@ export default class Chat {
         <div class="chat__container">
           <!-- Левая панель с сотрудниками -->
           <div class="chat__employees-sidebar" id="employees-list">
-            <div class="chat__employees-header">Employees</div>
+            <div class="chat__employees-header">USERS</div>
           </div>
           
           <!-- Правая панель с чатом -->
@@ -110,7 +110,7 @@ export default class Chat {
   }
 
   connectWebSocket() {
-    this.websocket = new WebSocket('ws://localhost:3000');
+    this.websocket = new WebSocket('https://chatbackend-w37r.onrender.com');
   
     this.websocket.onopen = () => {
       console.log('✅ WebSocket connected to backend');
@@ -243,7 +243,7 @@ export default class Chat {
         JSON.stringify({
           type: 'exit',
           user: this.currentUser,
-        })
+        }),
       );
     }
   }
